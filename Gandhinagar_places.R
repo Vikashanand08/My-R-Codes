@@ -33,3 +33,23 @@ akt_lon<-akt$lon
 akt_lat<-akt$lat
 gandhinagar_2<-gandhinagar_1+geom_point(aes(x=akt_lon,y=akt_lat),size=5,color="blue")
 gandhinagar_2
+
+# Distance between Birsa Munda Bhavan and Akshardham Temple in Gandhinagar, Gujarat in driving mode
+distance<-mapdist(from = "Birsa Munda Bhavan, Gandhinagar",
+                  to="Akshardham Temple, Gandhinagar, Gujarat",mode = "driving")
+# All details of distance beween Birsa Munda Bhavan and Akshardham Temple in driving mode
+distance 
+# distance beween Birsa Munda Bhavan and Akshardham Temple in KM-driving mode
+distance$km
+## distance beween Birsa Munda Bhavan and Akshardham Temple in Minutes-driving mode
+distance$minutes
+
+# Distance between Birsa Munda Bhavan and Akshardham Temple in Gandhinagar, Gujarat in walking mode
+distance_1<-mapdist(from = "Birsa Munda Bhavan, Gandhinagar",
+                  to="Akshardham Temple, Gandhinagar, Gujarat",mode = "walking")
+# All details of distance beween Birsa Munda Bhavan and Akshardham Temple in walking mode
+distance_1
+# distance beween Birsa Munda Bhavan and Akshardham Temple in KM-walking mode
+distance_1$km
+## distance beween Birsa Munda Bhavan and Akshardham Temple in Minutes-walking mode
+distance_1$minutes
