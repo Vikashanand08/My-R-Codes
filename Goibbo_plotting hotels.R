@@ -23,3 +23,8 @@ india+geom_point(aes(x=longitude,y=latitude),data = goibbo,
 # Details of hotels with star ratings
 ggplot(data=goibbo,aes(x=hotel_star_rating))+
   geom_bar(color="black",fill="blue")+labs(y="No. of hotels")
+
+# Details of hotels with star ratings with coord flip
+ggplot(data=goibbo,aes(x=hotel_star_rating))+
+  geom_bar(color="black",fill="blue")+
+labs(x="Number of Hotels",y="Hotel Star Rating")+coord_flip()
