@@ -21,9 +21,15 @@ gandhinagar_hybrid<-get_map("Gandhinagar,Gujarat",zoom = 13,maptype = "hybrid")
 gandhinagar_hybridmap<-ggmap(gandhinagar_hybrid)
 gandhinagar_hybridmap
 
+
+# Location of Birsa Munda  Bhavan in Gandhinagar,Gujarat
 bmb<-geocode("Birsa Munda Bhavan, Gandhinagar")
 bmb
 bmb_lon<-bmb$lon
 bmb_lat<-bmb$lat
-gandhinagar_city+ggplot(bmb,aes(x=bmb_lon,y=bmb_lat))+geom_point()
-
+gandhinagar_1<-gandhinagar_city+geom_point(aes(x=bmb_lon,y=bmb_lat),size=5,color="blue")
+akt<-geocode("Akshardham Temple, Gandhinagar, Gujarat")
+akt_lon<-akt$lon
+akt_lat<-akt$lat
+gandhinagar_2<-gandhinagar_1+geom_point(aes(x=akt_lon,y=akt_lat),size=5,color="blue")
+gandhinagar_2
