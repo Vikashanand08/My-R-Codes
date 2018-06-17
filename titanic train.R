@@ -51,3 +51,29 @@ ggplot(data=train,aes(x=Age,fill=Survived))+
 # Survival of male and female passangers of different passanger classess with coord flip
 ggplot(data=train,aes(x=Pclass,fill=Survived))+geom_bar()+
   labs(y="Number of passanger")+facet_wrap(~Sex)+coord_flip()
+
+
+
+# Investigation regarding chance of surviving the disaster
+View(train)
+tail(train)
+
+# Details of passanger male and female alongwith details of Passanger class
+ggplot(train,aes(x=train$Pclass,fill=train$Sex))+geom_bar()+
+  labs(x="Class of Passanger",y= "Number of passanger",title="Details of passanger")
+
+
+# Details of passanger male and female alongwith details of Passanger class with position dodge
+ggplot(train,aes(x=train$Pclass,fill=train$Sex))+geom_bar(position = "dodge")+
+  labs(x="Class of Passanger",y= "Number of passanger",title="Details of passanger")
+
+
+# Details of passanger male and female alongwith details of Passanger class with position dodge
+ggplot(train,aes(x=train$Pclass,fill=train$Sex))+geom_bar(position = "dodge")+
+  labs(x="Class of Passanger",y= "Number of passanger",title="Details of passanger")+facet_grid(~train$Survived)
+
+
+# Survival Potential of Passangers
+ggplot(train,aes(x=train$Pclass,y=train$Age,fill=train$Survived))+geom_jitter()+
+  labs(x="Passanger Class",y="Passanger Age",
+       title="Survival Potential of passangers")+facet_wrap(~train$Survived)
