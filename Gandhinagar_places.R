@@ -51,5 +51,12 @@ distance_1<-mapdist(from = "Birsa Munda Bhavan, Gandhinagar",
 distance_1
 # distance beween Birsa Munda Bhavan and Akshardham Temple in KM-walking mode
 distance_1$km
-## distance beween Birsa Munda Bhavan and Akshardham Temple in Minutes-walking mode
+# distance beween Birsa Munda Bhavan and Akshardham Temple in Minutes-walking mode
 distance_1$minutes
+
+# Straingt line between Birsa Munda Bhavan and Akshar Dham Temple
+# Row binding of geocode of Birsa Munda Bhavan and Akshar Dham Temple
+gnr_places<-rbind(bmb,akt)
+# A straight line between Birsa Munda Bhavan and Akshar Dham Temple
+gandhinagar_2+geom_line(data = gnr_places,aes(x=lon,y=lat),color="black",size=2)
+
