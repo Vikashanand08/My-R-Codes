@@ -77,7 +77,16 @@ spplot(kalol,"NAME_3", colorkey =F, scales=list(draw=T),
        main = "Kalol Taluka")
 
 
+# map of Dahegam Taluka
+gandhinagar = (gujarat3[gujarat3$NAME_2=="Gandhinagar",])
+dagegam = (gandhinagar[gandhinagar$NAME_3=="dahegam",])
+spplot(dahegam,"NAME_3", colorkey =F, scales=list(draw=T),
+       main = "Dahegam Taluka")
 
+gandhinagar = (gujarat3[gujarat3$NAME_2=="Gandhinagar",])
+dagegam = (gandhinagar[gandhinagar$NAME_3=="dahegam",])
+spplot(dahegam,"NAME_3", colorkey =F, scales=list(draw=T),
+       main = "Dahegam Taluka")
 
 
 
