@@ -26,6 +26,11 @@ spplot(ind2, "NAME_1", scales=list(draw=T), colorkey=F, main="India")
 gujarat2 = (ind2[ind2$NAME_1=="Gujarat",])
 spplot(gujarat2,"NAME_1", main = "Gujarat Districts", colorkey =F)
 
+
+# Districts of Gujarat
+gujarat2 = (ind2[ind2$NAME_1=="Gujarat",])
+spplot(gujarat2,"NAME_1", main = "Gujarat Districts", colorkey =F)
+
 # Districts of Gujarat Coloured map
 gujarat2$NAME_2 = as.factor(gujarat2$NAME_2)
 col = rainbow(length(levels(gujarat2$NAME_2)))
