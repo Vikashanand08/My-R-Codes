@@ -1,6 +1,3 @@
-
-
-
 # Reading shape file
 library(rgdal)
 waterlines<-readOGR(path.expand("IND_wat"),layer = "IND_water_lines_dcw")
